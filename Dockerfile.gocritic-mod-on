@@ -1,0 +1,12 @@
+FROM golang:1.15.6
+
+WORKDIR /go/src/app
+
+# Command below fails
+RUN GO111MODULE=on go get -v -u github.com/go-critic/go-critic/cmd/gocritic
+
+RUN GO111MODULE=on go get -v -u github.com/quasilyte/go-ruleguard/...
+RUN go get -v github.com/quasilyte/go-ruleguard/dsl
+
+COPY . .
+CMD [ "ruleguard", "-rules", "rules.go", "."]

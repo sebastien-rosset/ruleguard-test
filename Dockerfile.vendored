@@ -14,4 +14,4 @@ RUN ls -alrt
 
 # If you uncomment the command below, ruleguard will fail
 RUN go mod vendor
-CMD [ "ruleguard", "-rules", "rules.go", "."]
+CMD [ "ruleguard", "-rules", "string-rule.go,worker-rule.go", "."]

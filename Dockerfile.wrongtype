@@ -1,0 +1,11 @@
+FROM golang:1.15.6
+
+WORKDIR /go/src/app
+
+RUN GO111MODULE=on go get -v github.com/quasilyte/go-ruleguard/...
+RUN go get -v github.com/quasilyte/go-ruleguard/dsl
+
+COPY *.go go.* ./
+RUN ls -alrt
+
+CMD [ "ruleguard", "-rules", "log-rule.go,string-rule.go,worker-rule.go", "."]

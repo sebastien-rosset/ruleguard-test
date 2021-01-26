@@ -1,8 +1,10 @@
 package main
 
 import (
-  "fmt"
-  "github.com/sebastien-rosset/rg1"
+	"fmt"
+
+	"github.com/sebastien-rosset/rg1"
+	"go.uber.org/zap"
 )
 
 type Foo struct {
@@ -12,18 +14,23 @@ type Bar struct {
 }
 
 func (f *Foo) String() string {
-  return "foo"
+	return "foo"
 }
 
 func (f *Bar) Run() {
-  fmt.Printf("Running\n")
+	fmt.Printf("Running\n")
 }
 
 func main() {
-  fmt.Printf("Hello\n")
-  f := &Foo{}
-  fmt.Printf("Stringer %+v\n", f)
+	logger, _ := zap.NewProduction()
+	defer logger.Sync() // flushes buffer, if any
+	sugar := logger.Sugar()
 
-  var w rg1.Worker  = &Bar{}
-  w.Run()
+	f := &Foo{}
+	sugar.Infof("Stringer %+v", f)
+
+	var w rg1.Worker = &Bar{}
+	w.Run()
+
+	sugar.Info("Test")
 }

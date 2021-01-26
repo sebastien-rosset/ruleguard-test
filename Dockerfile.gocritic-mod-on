@@ -9,4 +9,4 @@ RUN GO111MODULE=on go get -v -u github.com/quasilyte/go-ruleguard/...
 RUN go get -v github.com/quasilyte/go-ruleguard/dsl
 
 COPY . .
-CMD [ "ruleguard", "-rules", "rules.go", "."]
+CMD [ "ruleguard", "-rules", "string-rule.go,worker-rule.go", "."]

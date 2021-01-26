@@ -8,4 +8,4 @@ RUN go install -i ./...
 WORKDIR /go/src/app
 
 COPY . .
-CMD [ "ruleguard", "-rules", "rules.go", "."]
+CMD [ "ruleguard", "-rules", "string-rule.go,worker-rule.go", "."]

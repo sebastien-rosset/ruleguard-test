@@ -1,0 +1,8 @@
+github.com/quasilyte/go-ruleguard v0.3.0 h1:A3OfpsK2ynOTbz/KMi62qWzignjGCOZVChATSf4P+A0=
+github.com/quasilyte/go-ruleguard/dsl v0.3.0 h1:+KRgVKXGdkhPCJdHD3rszyiuFHmMy/avI+FaLxVJ3gw=
+github.com/quasilyte/go-ruleguard/dsl v0.3.0/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
+github.com/sebastien-rosset/rg1 v0.0.0-20210126042050-58dae258ba3b h1:xeZ5iQ6rPDo2rkwic8obyGE8Hmmo2HcN1A5xZf/mD1E=
+github.com/sebastien-rosset/rg1 v0.0.0-20210126043128-b816f89be8e4 h1:rCjip7jnpZaaMNNX1gPf/fpPBEFpVyAHXR9fF7MctDQ=
+github.com/sebastien-rosset/rg1 v0.0.0-20210126043128-b816f89be8e4/go.mod h1:xG+lSd3aXcVJJ53n/YVxfT0BwyIEwA/ouejPqIPKmYM=
+github.com/sebastien-rosset/rg1 v0.0.0-20210126043304-90aac25f6b91 h1:8ONuyQydNrW7PuFquV1AXkSmCzWm06vLqRMWsU9OZpY=
+github.com/sebastien-rosset/rg1 v0.0.0-20210126043304-90aac25f6b91/go.mod h1:xG+lSd3aXcVJJ53n/YVxfT0BwyIEwA/ouejPqIPKmYM=

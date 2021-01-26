@@ -8,5 +8,7 @@ RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/i
 RUN GO111MODULE=on go get -v github.com/quasilyte/go-ruleguard/...
 RUN go get -v github.com/quasilyte/go-ruleguard/dsl
 
-COPY . .
+COPY *.go go.* ./
+RUN ls -alrt
+#RUN go mod vendor
 CMD [ "ruleguard", "-rules", "rules.go", "."]

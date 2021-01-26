@@ -14,7 +14,7 @@ func implementsStringer(ctx *dsl.VarFilterContext) bool {
 }
 
 func implementsWorker(ctx *dsl.VarFilterContext) bool {
-  worker := ctx.GetInterface(`github.com/sebastien-rosset/rg1/Worker`)
+  worker := ctx.GetInterface(`github.com/sebastien-rosset/rg1.Worker`)
   return types.Implements(ctx.Type, worker) ||
     types.Implements(types.NewPointer(ctx.Type), worker)
 }

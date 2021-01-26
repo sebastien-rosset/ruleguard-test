@@ -13,5 +13,5 @@ COPY *.go go.* ./
 RUN ls -alrt
 
 # If you uncomment the command below, ruleguard will fail
-#RUN go mod vendor
+RUN go mod vendor
 CMD [ "ruleguard", "-rules", "rules.go", "."]
